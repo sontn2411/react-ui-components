@@ -1,0 +1,118 @@
+.drawer {
+  position: relative;
+
+  .menu_toggle {
+    position: absolute;
+    width: 25px;
+    height: 50px;
+    background-color: #fff;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    z-index: 100;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background: transparent;
+      border-bottom-left-radius: 15px;
+      box-shadow: -5px 2px white;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background: transparent;
+      border-top-left-radius: 15px;
+      box-shadow: -5px -2px white;
+    }
+
+    // span {
+    //   position: relative;
+    //   left: -8px;
+    //   display: inline-block;
+    //   min-width: 25px;
+    //   height: 25px;
+    //   border-radius: 50%;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   &::before {
+    //     content: '';
+    //     position: absolute;
+    //     width: 8px;
+    //     height: 8px;
+    //     border-top: 2px solid red;
+    //     border-right: 2px solid red;
+    //     transform: rotate(45deg);
+    //   }
+    // }
+  }
+
+  .navigation {
+    position: relative;
+    // width: 360px;
+    overflow: hidden;
+    width: 80px;
+    background: white;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: 0.5s;
+    .menu {
+      position: relative;
+      width: 100%;
+      padding: 30px 10px;
+      transition: 0.5s;
+
+      li {
+        a {
+          position: relative;
+          display: flex;
+          border-radius: 30px;
+          &:hover {
+            background: red;
+            color: white;
+          }
+
+          .icon {
+            position: relative;
+            min-width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+          }
+          .text {
+            position: relative;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.25em;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .active {
+    width: 360px;
+  }
+}
